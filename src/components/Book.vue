@@ -1,6 +1,7 @@
 <template>
   <div>
-    <OneBookData v-for="(onebook, ind) in books" :key="ind" />
+    <OneBookData v-for="(onebook, ind) in books"
+    :oneBookData="onebook" :key="ind" />
   </div>
 </template>
 
