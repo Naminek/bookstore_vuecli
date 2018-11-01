@@ -9,7 +9,7 @@
     <img alt="logo2" src="../assets/gray.png">
     <img alt="logo3" src="../assets/blue.png"> -->
     <h1>Namine's Book Store</h1>
-      <Book :books="bookData"/>
+      <OneBookData :oneBookData="bookData"/>
 		<!-- <div id="nav">
 			<router-link to="/">Home</router-link> |
 			<router-link to="/about">About</router-link>
@@ -20,10 +20,10 @@
 </template>
 
 <script>
-import Book from "@/components/Book.vue";
+import OneBookData from "@/components/OneBookData.vue";
 export default {
   components: {
-    Book,
+    OneBookData,
   },
   data() {
     return {

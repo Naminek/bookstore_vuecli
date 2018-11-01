@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import OneBookData from "@/components/OneBookData.vue";
-export default {
-  name: 'book',
-  props: ["books"],
-  components: {
-    OneBookData
-  }
-}
+// import OneBookData from "@/components/OneBookData.vue";
+// export default {
+//   name: 'book',
+//   props: ["books"],
+//   components: {
+//     OneBookData
+//   }
+// }
 </script>
 
 <style scoped>
