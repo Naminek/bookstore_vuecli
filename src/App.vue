@@ -5,7 +5,10 @@
       <p>is loading...</p>
     </div>
     <div v-slse>
-      <header />
+      <!-- <img alt="logo1" src="../assets/red.png">
+    <img alt="logo2" src="../assets/gray.png">
+    <img alt="logo3" src="../assets/blue.png"> -->
+    <h1>Namine's Book Store</h1>
       <Book :books="bookData"/>
 		<!-- <div id="nav">
 			<router-link to="/">Home</router-link> |
@@ -18,16 +21,14 @@
 
 <script>
 import Book from "@/components/Book.vue";
-import Header from "@/components/Header.vue";
 export default {
   components: {
     Book,
-    Header
   },
   data() {
     return {
-	  bookData: [],
-	  isLoading: true
+      bookData: [],
+      isLoading: true
     };
   },
   created() {

@@ -1,13 +1,17 @@
 <template>
   <div>
-    <p v-for="(onebook, ind) in books" :key="ind">{{ onebook }}</p>
+    <OneBookData v-for="(onebook, ind) in books" :key="ind" />
   </div>
 </template>
 
 <script>
+import OneBookData from "@/components/OneBookData.vue";
 export default {
   name: 'book',
   props: ["books"],
+  components: {
+    OneBookData
+  }
 }
 </script>
 
