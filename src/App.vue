@@ -13,8 +13,8 @@
     		<h1>Namine's Book Store</h1>
 			</div>
 			<div id="serch_engine">
-					<img class="search_icon" src="./assets/search_icon.png">
 				<label for="book_search">
+					<img class="search_icon" src="./assets/search_icon.png">
 			    <input id="book_search" v-model="searchWords" placeholder="Search by keyword" size="30">
 				</label>
 			</div>
@@ -38,12 +38,10 @@ export default {
 	},
 	computed: {
 		findBooks() {
-			// console.log(this.searchWords);
 			if (this.searchWords == "") {
 				return this.bookData;
-				// console.log(bookData);
 			} else {
-				console.log(this.searchWords);
+				// console.log(this.searchWords);
 				return this.bookData.filter
 				(book => (book.title.toUpperCase().includes(this.searchWords.toUpperCase()) 
 				|| book.description.toUpperCase().includes(this.searchWords.toUpperCase())));
@@ -111,7 +109,12 @@ export default {
 
 .search_icon {
 	width: 35px;
+	margin: 0;
 }
+
+/* #search_engine input {
+	font-size: 20px;
+} */
 
 #book_list {
 	grid-row: 2;
