@@ -5,9 +5,9 @@
       <p>is loading...</p>
     </div>
     <div v-slse>
-      <!-- <img alt="logo1" src="../assets/red.png">
-    <img alt="logo2" src="../assets/gray.png">
-    <img alt="logo3" src="../assets/blue.png"> -->
+      <img alt="logo1" src="./assets/red.png">
+    <img alt="logo2" src="./assets/gray.png">
+    <img alt="logo3" src="./assets/blue.png">
     <h1>Namine's Book Store</h1>
       <OneBookData :oneBookData="bookData"/>
 		<!-- <div id="nav">
