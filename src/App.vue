@@ -13,12 +13,12 @@
     		<h1>Namine's Book Store</h1>
 			</div>
 			<div id="serch_engine">
-				<label>
-					<img class="search_icon "src="./assets/search_icon.png">
+					<img class="search_icon" src="./assets/search_icon.png">
+				<label for="book_search">
 			    <input id="book_search" v-model="searchWords" placeholder="Search by keyword" size="30">
 				</label>
 			</div>
-      <OneBookData :oneBookData="bookData" id="book_list"/>
+      <OneBookData :oneBookData="findBooks" id="book_list"/>
     </div>
   </div>
 </template>
@@ -37,14 +37,17 @@ export default {
     };
 	},
 	computed: {
-		findBooks: function() {
+		findBooks() {
+			// console.log(this.searchWords);
 			if (this.searchWords == "") {
-					return this.bookData;
-					console.log(bookData);
-				} else {
-					console.log(searchWords);
-					return this.bookData.filter(book => this.searchWords.includes(book.title || book.description));
-				}
+				return this.bookData;
+				// console.log(bookData);
+			} else {
+				console.log(this.searchWords);
+				return this.bookData.filter
+				(book => (book.title.toUpperCase().includes(this.searchWords.toUpperCase()) 
+				|| book.description.toUpperCase().includes(this.searchWords.toUpperCase())));
+			}
 		}
 	},
   created() {
@@ -181,7 +184,7 @@ export default {
 #book_list div .caption .book_title {
 	font-weight: 400;
 	color: #f3c704;
-	padding: 10px 20px;
+	padding: 20px 20px 0;
 	margin-bottom: 0;
 	position: relative;
 	left: 100%;
