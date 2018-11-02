@@ -1,7 +1,7 @@
 <template>
 	<div>
   <div v-for="(oneBook, index) in oneBookData" :key="index"> 
-    <img alt="book_cover[[index]]" src="oneBook.cover">
+    <img alt="book_cover" :src="oneBook.cover">
     <div class="caption">
     	<h3 class="book_title">{{oneBook.title}}</h3>
     	<p class="book_detail">{{oneBook.description}}</p>
