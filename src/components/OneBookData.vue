@@ -1,7 +1,7 @@
 <template>
 	<div>
   <div v-for="(oneBook, index) in oneBookData" :key="index"> 
-    <img :alt="`book_image${ index }`" :src="oneBook.cover">
+    <img :alt="`book_image${ index }`" :src="oneBook.cover" class="first_img">
     <div class="caption">
     	<h3 class="book_title">{{oneBook.title}}</h3>
     	<p class="book_detail">{{oneBook.description}}</p>
@@ -39,32 +39,32 @@ export default {
       
       function printImage() {
         var showCover = document.getElementById('photo_gallery');
-    
         showCover.style.display = "block";
+
 		    var spanToClose = document.getElementsByClassName("close")[0];
 		    spanToClose.onclick = function () {
 			    showCover.style.display = "none";
 		    }
 
-        var spanToPrevious = document.getElementsByClassName("previous_cover")[0];
-        spanToPrevious.onclick = function () {
-			    if (pushedButton === 0) {
-				    pushedButton = 24
-			    } else {
-				    pushedButton = pushedButton - 1
-			    }
-			      printImage();
-		    }
+        // var spanToPrevious = document.getElementsByClassName("previous_cover")[0];
+        // spanToPrevious.onclick = function () {
+			  //   if (pushedButton === 0) {
+				//     pushedButton = 24
+			  //   } else {
+				//     pushedButton = pushedButton - 1
+			  //   }
+			  //     printImage();
+		    // }
 
-        var spanToNext = document.getElementsByClassName("next_cover")[0];
-        spanToNext.onclick = function () {
-			    if (pushedButton === 24) {
-				    pushedButton = 0
-			    } else {
-				    pushedButton = pushedButton + 1
-			    }
-			  printImage();
-		  }
+        // var spanToNext = document.getElementsByClassName("next_cover")[0];
+        // spanToNext.onclick = function () {
+			  //   if (pushedButton === 24) {
+				//     pushedButton = 0
+			  //   } else {
+				//     pushedButton = pushedButton + 1
+			  //   }
+			  // printImage();
+		  // }
 	  }
 	printImage();
     }

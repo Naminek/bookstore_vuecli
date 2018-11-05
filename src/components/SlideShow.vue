@@ -8,18 +8,10 @@
 </template>
 
 <script>
-// import OneBookData from "@/components/OneBookData.vue";
+
 export default {
   name: "slideShow",
-	props: ["slideShow"],
-	// components: {
-	// 	OneBookData
-	// },
-	// data(){
-	// 	return{
-
-	// 	}
-	// }
+	props: ["slideShow"]
 };
 </script>
 

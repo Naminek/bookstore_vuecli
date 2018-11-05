@@ -19,12 +19,14 @@
 				</label>
 			</div>
       <OneBookData :oneBookData="findBooks" id="book_list"/>
+			<!-- <slideShow :slideShow="coverUrl" id="photo_gallery" class="other_cover" /> -->
     </div>
   </div>
 </template>
 
 <script>
 import OneBookData from "@/components/OneBookData.vue";
+// import SlideShow from "@/components/SlideShow.vue";
 export default {
   components: {
     OneBookData,
@@ -69,9 +71,6 @@ export default {
         .catch(function(error) {
           console.log(error);
         });
-		},
-		showCover(number){
-			console.log(number)
 		}
   }
 };
@@ -126,7 +125,7 @@ export default {
 	flex-wrap: wrap;
 }
 
-#book_list div {
+#book_list div:not(:last-child) {
 	width: 30%;
 	margin: 1%;
 	position: relative;
@@ -137,12 +136,12 @@ export default {
 }
 
 
-#book_list div img {
+#book_list div .first_img {
 	width: 100%;
 	transition: all .8s ease-out;
 }
 
-#book_list div:hover img {
+#book_list div:hover .first_img {
 	opacity: .4;
 	transform: scale(1.3);
 }
