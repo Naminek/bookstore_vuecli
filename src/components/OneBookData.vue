@@ -15,11 +15,11 @@
 export default {
   name: "oneBookData",
   props: ["oneBookData"],
-  data() {
-    return {
-      buttonValue: ""
-    }
-  }
+  // data() {
+  //   return {
+  //     buttonValue: ""
+  //   }
+  // }
 };
 </script>
 
