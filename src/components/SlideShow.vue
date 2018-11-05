@@ -2,7 +2,7 @@
   <div>
 		<span class="close">&times;</span>
 		<span class="previous_cover ml-3">&#60;</span>
-		<img :src="slideShow.detail" alt="`book_cover">
+		<img :src="slideShow" alt="`book_cover">
 		<span class="next_cover">&#62;</span>
 	</div>
 </template>

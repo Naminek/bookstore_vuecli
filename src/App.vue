@@ -69,6 +69,9 @@ export default {
         .catch(function(error) {
           console.log(error);
         });
+		},
+		showCover(number){
+			console.log(number)
 		}
   }
 };
