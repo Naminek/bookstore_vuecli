@@ -45,26 +45,6 @@ export default {
 		    spanToClose.onclick = function () {
 			    showCover.style.display = "none";
 		    }
-
-        // var spanToPrevious = document.getElementsByClassName("previous_cover")[0];
-        // spanToPrevious.onclick = function () {
-			  //   if (pushedButton === 0) {
-				//     pushedButton = 24
-			  //   } else {
-				//     pushedButton = pushedButton - 1
-			  //   }
-			  //     printImage();
-		    // }
-
-        // var spanToNext = document.getElementsByClassName("next_cover")[0];
-        // spanToNext.onclick = function () {
-			  //   if (pushedButton === 24) {
-				//     pushedButton = 0
-			  //   } else {
-				//     pushedButton = pushedButton + 1
-			  //   }
-			  // printImage();
-		  // }
 	  }
 	printImage();
     }

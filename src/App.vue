@@ -114,10 +114,6 @@ export default {
 	margin: 0;
 }
 
-/* #search_engine input {
-	font-size: 20px;
-} */
-
 #book_list {
 	grid-row: 2;
 	grid-column: 1 / 4;
