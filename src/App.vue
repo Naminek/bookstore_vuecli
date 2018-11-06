@@ -103,6 +103,7 @@ export default {
 #logo {
   grid-row: 1;
   grid-column: 1;
+	padding-left: 20px;
 }
 
 #logo img{
