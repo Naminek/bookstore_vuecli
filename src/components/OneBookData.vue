@@ -1,14 +1,14 @@
 <template>
 	<div>
-  <div v-for="(oneBook, index) in oneBookData" :key="index"> 
-    <img :alt="`book_image${ index }`" :src="oneBook.cover" class="first_img">
-    <div class="caption">
-    	<h3 class="book_title">{{oneBook.title}}</h3>
-    	<p class="book_detail">{{oneBook.description}}</p>
-    	<button type="button" class="more_info" :data-link="`${oneBook.detail}`" 
-      :value="`${ index }`" @click="showCover($event, oneBook)"  id="cover">More Info</button>
+    <div v-for="(oneBook, index) in oneBookData" :key="index"> 
+      <img :alt="`book_image${ index }`" :src="oneBook.cover" class="first_img">
+      <div class="caption">
+    	  <h3 class="book_title">{{oneBook.title}}</h3>
+    	  <p class="book_detail">{{oneBook.description}}</p>
+    	  <button type="button" class="more_info" :data-link="`${oneBook.detail}`" 
+        :value="`${ index }`" @click="showCover($event, oneBook)"  id="cover">More Info</button>
+      </div>
     </div>
-  </div>
     <slideShow :slideShow="coverUrl" id="photo_gallery" class="other_cover" />
 	</div>
 </template>
@@ -99,8 +99,11 @@ export default {
 }
 
 .close {
-	color: #aaaaaa;
+	color: #ffffff;
 	float: right;
+  position: absolute;
+  top: 5%;
+  right: 10%;
 	font-size: 40px;
 	font-weight: bold;
 }
