@@ -3,16 +3,16 @@
     <div v-if="isLoading">
       <img alt="loading" src="./assets/image_now_loading.png">
     </div>
-    <div v-else id="container">
+    <div v-else id="container" class="d-flex">
 			<div id="logo">
      		 <img alt="logo1" src="./assets/red.png">
      		 <img alt="logo2" src="./assets/gray.png">
      		 <img alt="logo3" src="./assets/blue.png">
 			</div>
-			<div id="page_title">
+			<div id="page_title" class="d-flex">
     		<h1>Namine's Book Store</h1>
 			</div>
-			<div id="serch_engine">
+			<div id="search_engine">
 				<label for="book_search">
 					<img class="search_icon" src="./assets/search_icon.png">
 			    <input id="book_search" v-model="searchWords" placeholder="Search by keyword" size="30">
@@ -88,11 +88,16 @@ export default {
 	grid-template-rows: 150px 1fr;
   grid-template-columns: 1fr 2fr 1fr;
 	padding: 30px;
+	align-items: flex-end;
 }
 
 #logo {
   grid-row: 1;
   grid-column: 1;
+}
+
+#logo img{
+	max-width: 50px;
 }
 
 #page_title {
@@ -102,16 +107,24 @@ export default {
 	align-items: baseline;
 }
 
+h1 {
+	font-size: 4vmax;
+}
+
 #search_engine {
   grid-row: 1;
   grid-column: 3;
-	/* display: flex;
-	align-items: baseline; */
+	display: inline;
+	/* align-items: baseline; */
 }
 
 .search_icon {
-	width: 35px;
-	margin: 0;
+	width: 30px;
+	/* margin: 0; */
+}
+
+#search_engine input{
+	margin-bottom: 20px;
 }
 
 #book_list {
