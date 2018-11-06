@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-    <div v-if="isLoading">
+    <div v-if="isLoading" id="loading">
       <img alt="loading" src="./assets/image_now_loading.png">
     </div>
     <div v-else id="container" class="d-flex">
@@ -81,6 +81,15 @@ export default {
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #2c3e50;
+}
+
+#loading {
+	position: absolute;
+	top: 100px;
+	left: 46%;
+}
+#loading img {
+	width: 100%;
 }
 
 #container {
